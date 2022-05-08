@@ -29,7 +29,7 @@ void Gui::create_left_sidebar(sf::RenderWindow *window)
     left_line.setSize(sf::Vector2f(2.f, _window_height));
     left_line.setPosition(2.f, 100.f);
     right_line.setSize(sf::Vector2f(2.f, _window_height));
-    right_line.setPosition(300.f, 100.f);
+    right_line.setPosition(448.f, 100.f);
     window->draw(left_line);
     window->draw(right_line);
 };
@@ -41,7 +41,16 @@ void Gui::create_right_sidebar(sf::RenderWindow *window)
     right_line.setSize(sf::Vector2f(2.f, _window_height));
     right_line.setPosition(_window_width-2.f, 100.f);
     left_line.setSize(sf::Vector2f(2.f, _window_height));
-    left_line.setPosition(_window_width-300.f, 100.f);
+    left_line.setPosition(_window_width-448.f, 100.f);
     window->draw(right_line);
     window->draw(left_line);
+};
+
+void Gui::create_world_container(sf::RenderWindow *window)
+{
+    sf::RectangleShape container;
+    container.setSize(sf::Vector2f(1500.f, 1000.f));
+    container.setPosition(450.f, 102.f);
+    container.setFillColor(sf::Color(52, 73, 94));
+    window->draw(container);
 };

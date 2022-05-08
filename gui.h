@@ -20,6 +20,8 @@ public:
 
     void create_right_sidebar(sf::RenderWindow *window);
 
+    void create_world_container(sf::RenderWindow *window);
+
 private:
     int _window_width;
     int _window_height;
