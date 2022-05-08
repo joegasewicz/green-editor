@@ -15,6 +15,11 @@ public:
     explicit Gui(int window_width, int window_height);
 
     void create_nav(sf::RenderWindow *window);
+
+    void create_left_sidebar(sf::RenderWindow *window);
+
+    void create_right_sidebar(sf::RenderWindow *window);
+
 private:
     int _window_width;
     int _window_height;

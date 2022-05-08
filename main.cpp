@@ -32,6 +32,8 @@ int main()
         // ================================
         // Gui
         gui.create_nav(&window);
+        gui.create_left_sidebar(&window);
+        gui.create_right_sidebar(&window);
 
         // End current frame
         window.display();
