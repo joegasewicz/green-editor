@@ -15,10 +15,14 @@ int main()
     Gui gui = Gui{LE_WINDOW_WIDTH, LE_WINDOW_HEIGHT};
     Control cursor_up = Control{"assets/cursor_sprites.png", 0, 0, 31, 32};
     Control cursor_right = Control{"assets/cursor_sprites.png", 32, 0, 33, 32};
+    Control cursor_bottom = Control{"assets/cursor_sprites.png", 64, 0, 33, 32};
+    Control cursor_left = Control{"assets/cursor_sprites.png", 96, 0, 32, 32};
 
     // Sprites
     cursor_up.set(1600.f, 1150.f);
-    cursor_right.set(1700.f, 1300.f);
+    cursor_right.set(1700.f, 1247.f);
+    cursor_bottom.set(1600.f, 1350.f);
+    cursor_left.set(1490.f,1247.f);
 
     window.create(sf::VideoMode(LE_WINDOW_WIDTH, LE_WINDOW_HEIGHT), "Level Editor");
 
@@ -45,6 +49,8 @@ int main()
         // Sprites
         cursor_up.draw(&window);
         cursor_right.draw(&window);
+        cursor_bottom.draw(&window);
+        cursor_left.draw(&window);
 
         // End current frame
         window.display();
